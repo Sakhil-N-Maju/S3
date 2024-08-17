@@ -16,7 +16,7 @@ void main()
     {
         if(arr[i]==x)
         {
-            printf("ELEMENT FOUND AT %d POSITION",arr[i]);
+            printf("ELEMENT FOUND AT %d POSITION",i+1);
             flag=1;
             break;
         }
