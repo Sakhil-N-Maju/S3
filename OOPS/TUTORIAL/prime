@@ -1,0 +1,24 @@
+import java.util.*;
+class prime
+{
+	public static void main(String args[])
+	{
+		Scanner s = new Scanner(System.in);
+		int flag = 0;
+		System.out.println("ENTER NUMBER TO CHECK : ");
+		int a = s.nextInt();
+		for(int i=2;i<a;i++)
+		{
+			if((a%i) == 0)
+			{
+				System.out.println("THE NUMBER IS NOT A PRIME NUMBER ");
+				flag = 1;
+				break;
+			}
+		}
+		if(flag == 0)
+		{
+			System.out.println("THE NUMBER IS A PRIME NUMBER ");
+		}		
+	}
+}
