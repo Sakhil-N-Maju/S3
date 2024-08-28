@@ -1,0 +1,41 @@
+//SAKHIL N MAJU - 56
+// BINARY SEARCH
+#include <stdio.h>
+
+int binarySearch(int arr[], int low, int high, int x) 
+{
+    while (high >= low) 
+    {
+        int mid = low + (high - low) / 2;
+
+        if (arr[mid] == x)
+            return mid;
+        else if (arr[mid] > x)
+            return binarySearch(arr, low, mid - 1, x);
+        else
+            return binarySearch(arr, mid + 1, high, x);
+    }
+  
+}
+
+int main() 
+{
+    int n,a[100],x;
+    printf("ENTER THE ARRAY LIMIT : ");
+    scanf("%d",&n);
+    printf("ENTER ARRAY ELEMENTS :\n");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("ENTER THE ELEMENT TO BE SEARCHED :");
+    scanf("%d",&x);
+    int result = binarySearch(a, 0, sizeof(a) / sizeof(a[0]) - 1, x);
+
+    if (result != -1)
+        printf("Element is present at index %d\n", result);
+    else
+        printf("Element not found\n");
+
+    return 0;
+}
