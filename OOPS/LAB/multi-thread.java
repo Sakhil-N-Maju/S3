@@ -1,10 +1,10 @@
+//SAKHIL N MAJU - 56
 import java.util.Random;
-
 class NumberGenerator extends Thread {
     public void run() {
         Random random = new Random();
         while (true) {
-            int num = random.nextInt(100); // Generate a random number between 0 and 99
+            int num = random.nextInt(100); 
             System.out.println("Generated Number: " + num);
             if (num % 2 == 0) {
                 new Square(num).start();
@@ -12,7 +12,7 @@ class NumberGenerator extends Thread {
                 new Cube(num).start();
             }
             try {
-                Thread.sleep(1000); // Wait for 1 second
+                Thread.sleep(1000); 
             } catch (InterruptedException e) {
                 System.out.println("Thread interrupted: " + e.getMessage());
             }
