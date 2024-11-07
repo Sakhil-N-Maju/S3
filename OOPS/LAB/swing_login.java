@@ -32,7 +32,7 @@ class test implements ActionListener{
 		String s = e.getActionCommand();
 		if(s.equals("SUBMIT")){
 			if(t1.getText().equals("SAKHIL") && t2.getText().equals("1234")){
-				l3.setText("WELCOME" + t1.getText());
+				l3.setText("WELCOME  " + t1.getText());
 			}
 			else{
 				l3.setText("WRONG ID PASSWORD, TRY AGAIN");
@@ -41,7 +41,7 @@ class test implements ActionListener{
 		if(s.equals("CLEAR")){
 			t1.setText("");
 			t2.setText("");
-			l3.setText("THANK YOU, HAVE A GREAT DAY");
+			l3.setText("THANK YOU");
 		}
 	}
 
